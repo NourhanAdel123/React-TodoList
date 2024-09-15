@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #9182c4, #d8aed3);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 800px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-item.fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.todo-item.fade-out {
+  animation: fadeOut 0.2s ease forwards;
+}
+
+@keyframes complete {
+  from {
+    opacity: 1;
+    background-color: #ffffff;
+  }
+  to {
+    opacity: 0.5;
+    background-color: #d3ffd3;
+  }
+}
+
+.todo-item.completed {
+  animation: complete 0.2s ease forwards;
+}
+
+.todo-item:nth-child(4n+1) {
+  background-color: #d789d7;
+}
+
+.todo-item:nth-child(4n+2) {
+  background-color: #9d65c9;
+}
+
+.todo-item:nth-child(4n+3) {
+  background-color: #5d54a4;
+}
+
+.todo-item:nth-child(4n+4) {
+  background-color: #2a3d66;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.icon-button .fa-edit {
+  color: #ffc107;
+}
+
+.icon-button .fa-trash {
+  color: #dc3545;
+}
+
+.icon-button .fa-check {
+  color: #28a745;
+}
