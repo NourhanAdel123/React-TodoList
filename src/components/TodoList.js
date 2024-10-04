@@ -5,7 +5,7 @@ import addSound from "./sounds/add.mp3";
 import deleteSound from "./sounds/delete.mp3";
 import completeSound from "./sounds/complete.mp3";
 
-function TodoList() {
+function Test() {
   const [todo, settodo] = useState("");
   const [todos, setTodos] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
@@ -142,4 +142,4 @@ function TodoList() {
   );
 }
 
-export default TodoList;
+export default Test;

@@ -15,6 +15,7 @@ body {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 800px;
+  max-width: 100%;
 }
 
 h1 {
@@ -58,11 +59,12 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+  padding: 8px 10px;
   border-radius: 5px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   transition: opacity 0.5s ease, transform 0.5s ease;
+  font-size: 14px;
 }
 
 @keyframes fadeIn {
@@ -107,7 +109,7 @@ button:hover {
 }
 
 .todo-item.completed {
-  animation: complete 0.2s ease forwards;
+  animation: complete 2s ease forwards;
 }
 
 .todo-item:nth-child(4n+1) {
@@ -135,7 +137,7 @@ button:hover {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 5px;
 }
 
@@ -149,4 +151,58 @@ button:hover {
 
 .icon-button .fa-check {
   color: #28a745;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  .todo-item {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 15px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  input[type="text"] {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .todo-item {
+    padding: 4px 6px;
+    font-size: 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .icon-button {
+    font-size: 18px;
+  }
 }
